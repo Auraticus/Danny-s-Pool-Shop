@@ -1,0 +1,13 @@
+.image{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.image:hover{
+    transition: 0.3s;
+    scale: 1.20;
+    cursor: pointer;
+}
