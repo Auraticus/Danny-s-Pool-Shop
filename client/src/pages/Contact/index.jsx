@@ -3,6 +3,8 @@ import { Container, Form, Button } from 'react-bootstrap';
 import styles from './styles.module.css';
 import NavBarComponent from '../../components/Navbar';
 import Footer from '../../components/Footer';
+import http from '../../http';
+import Swal from 'sweetalert2';
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -19,10 +21,29 @@ function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    try {
+      console.log('Form submitted:', formData);
+      const response = await http.post('/api/sendEmail/send', {
+        name: formData.name,
+        email: formData.email,
+        message: formData.message
+      });
+      if (response.status === 200) { // Corrected comparison operator
+        Swal.fire({
+          icon: 'success',
+          title: 'Email Sent',
+          text: 'Thank you for contacting us. Someone will be in contact with you shortly.',
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: 'error',
+        title: 'Account Not Activated',
+        text: 'Your account is not activated. Please check your email for the activation link.',
+      });
+    }
   };
 
   return (
