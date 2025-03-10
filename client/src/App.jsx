@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import Home from './pages/Home';
 import Contact from './pages/Contact';
+import Products from './pages/Products';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/products" element={<Products/>}/>
           </Routes>
         </div>
       </div>

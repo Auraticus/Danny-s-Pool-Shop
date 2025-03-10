@@ -7,6 +7,7 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const emailRouter = require('./routes/_email.router');
+const productsRouter = require('./routes/_products.router');
 require('dotenv').config();
 
 // Function to build the React app and move the dist folder
@@ -46,6 +47,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'dist')));
 
 app.use('/api/sendEmail', emailRouter);
+app.use('/api/products', productsRouter);
 // All other GET requests not handled before will return the React app
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
