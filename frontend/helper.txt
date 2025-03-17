@@ -1,0 +1,6 @@
+components have folders for each type of part of the website (ie the navbar or a paragraph or images etc)
+pages just import the components and make up the web page using components
+app.jsx handles all of the URL routing and points a / to a page jsx file which then imports all components on it etc.
+
+
+Dont be afraid to use GPT BUT understand what it is saying before going with it 
