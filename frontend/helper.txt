@@ -4,3 +4,36 @@ app.jsx handles all of the URL routing and points a / to a page jsx file which t
 
 
 Dont be afraid to use GPT BUT understand what it is saying before going with it 
+
+
+
+
+I know I went fast.... but do you understand what happened?
+more or less , there wer multiple places we had to add the services and swap it out from products .
+
+
+Yeah so with the backend you didnt import it into the app.js 
+then I just cleaned up the router so no biggy there.
+Then when you make a change on backend you need to restart it to take affect.
+
+On frontend you didnt import the page itself into app.jsx which showed me the issue that you copied the page code from products but didnt rename the function inside the code to 
+services etc. Then I just made a new service lsit component to handle the services seperatly from the products 
+
+cool , so how do i rewrite the cards to add the services
+not in this case. We keep consistent styling where we can as it keeps a good UX (User Experience)
+ok so all i need to change then is the text describing the product service "" 
+
+yes in the services router you would just change the object array details
+ok so instead of pricing etc. it would be something like "we will chlorinate your pool on a weekly basis"
+
+
+well yes...
+
+but ?
+
+make sure to match the object array keys on the backend to the frontend
+
+can you do an example please
+ok cool let me give it a swing and then after this , can you hlep me out to setup the first stage of the exam git
+
+its alot to focus on with everyone in the DC , i have better focus 1 on 1 ... i nkow its not always possible but the less distractions the better . I really need to succeed in this
